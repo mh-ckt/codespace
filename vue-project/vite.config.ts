@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-     Components({
+    Components({
       resolvers: [
         AntDesignVueResolver({
           importStyle: false, // css in js
@@ -18,6 +18,13 @@ export default defineConfig({
       ],
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/styles/variables.scss";`
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

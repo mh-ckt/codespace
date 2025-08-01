@@ -8,10 +8,10 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/func">功能</RouterLink>
       </nav>
     </div>
   </header>
-
   <RouterView />
 </template>
 
