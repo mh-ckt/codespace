@@ -1,15 +1,9 @@
 <template>
-  <div class="about">
-    <h1></h1>
-  </div>
+  <StylePosition />
 </template>
-
+<script setup>
+import StylePosition from '@/components/StylePosition/index.vue'
+</script>
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
+@media (min-width: 1024px) {}
 </style>

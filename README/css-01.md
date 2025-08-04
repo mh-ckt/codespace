@@ -1,7 +1,8 @@
-- [position:fixed 和 position：sticky 的区别？](##01)
-- [如何实现水平垂直居中布局？](##02)
-- [实现响应式布局的方式有哪些？](##03)
-- [css 选择器的优先级?](##04)
+- [position:fixed 和 position：sticky 的区别？](#positionfixed-和-positionsticky-的区别)
+- [粘性定位失效的原因的可能有哪些？](#粘性定位失效的原因的可能有哪些)
+- [如何实现水平垂直居中布局？](#如何实现水平垂直居中布局)
+- [实现响应式布局的方式有哪些？](#实现响应式布局的方式有哪些)
+- [css 选择器的优先级？](#css-选择器的优先级)
 
 ## position:fixed 和 position：sticky 的区别？
 
@@ -18,6 +19,13 @@ position：sticky 是粘性定位
 3. 粘性定位在特定范围内固定，超出范围后恢复流动。
 
 上面的定位方式都支持设置 top left right bottom 的值
+
+## 粘性定位失效的原因的可能有哪些？
+1. ​​父容器或祖先元素设置了 overflow: hidden / overflow: scroll / overflow: auto.
+2. sticky 元素是否处于一个​​可滚动的容器内​​？页面/父容器是否能滚动？
+3. 检查sticky的z-index是否是否比较低，被其他元素遮挡。
+4. 元素没有设置top、left、bottom、right值。
+
 
 ## 如何实现水平垂直居中布局？
 
