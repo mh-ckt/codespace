@@ -21,8 +21,8 @@ const toggleRole = () => {
 }
 
 onMounted(() => {
-  let aa = ref({ name: '张三' })
-  let bb = reactive({ name: '张三' })
+  const aa = ref({ name: '张三' })
+  const bb = reactive({ name: '张三' })
   console.log(99, aa);
   console.log(88, bb);
 })
@@ -33,14 +33,21 @@ onMounted(() => {
   <section>
     <h4>模板语法</h4>
     <a-tabs v-model:activeKey="activeKey">
-      <a-tab-pane key="1" tab="动态绑定属性">
+      <a-tab-pane key="1"
+tab="动态绑定属性"
+>
         <!-- 动态绑定 data-* 属性 -->
         <div :[dataAttr]="roleData">用户信息</div>
         <!-- 切换角色 -->
         <button @click="toggleRole">切换角色（管理员/用户）</button>
       </a-tab-pane>
-      <a-tab-pane key="2" tab="Tab 2" force-render>Content of Tab Pane 2</a-tab-pane>
-      <a-tab-pane key="3" tab="Tab 3">Content of Tab Pane 3</a-tab-pane>
+      <a-tab-pane key="2"
+tab="Tab 2"
+force-render
+>Content of Tab Pane 2</a-tab-pane>
+      <a-tab-pane key="3"
+tab="Tab 3"
+>Content of Tab Pane 3</a-tab-pane>
     </a-tabs>
   </section>
 

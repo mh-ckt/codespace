@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 数据
-let pictures = []
+const pictures = []
 for (let index = 0; index < 500; index++) {
   const url = `https://robohash.org/${index}.png`;
   let productName = '兰博基尼'
@@ -30,8 +30,13 @@ for (let index = 0; index < 500; index++) {
 <template>
   <div class="floor1-container">
     <ul class="floor1-content">
-      <li class="floor1-product" v-for="item in pictures">
-        <img :src="item.url" :key="item.name" :alt="item.name">
+      <li class="floor1-product"
+v-for="item in pictures"
+>
+        <img :src="item.url"
+:key="item.name"
+:alt="item.name"
+>
         <div class="product-bottom">
           <span>产品名称：{{ item.name }}</span>
           <span>产品描述：{{ item.desc }}</span>
