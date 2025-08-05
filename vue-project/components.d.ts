@@ -8,17 +8,23 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Aa: typeof import('./src/components/CustomBotton/aa.vue')['default']
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
+    CustomBotton: typeof import('./src/components/CustomBotton/index.vue')['default']
+    CustomBottton: typeof import('./src/components/CustomBottton/index.vue')['default']
+    Demo: typeof import('./src/components/CustomBotton/Demo.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     LazyImages: typeof import('./src/components/LazyImages/index.vue')['default']
+    LoadingBottton: typeof import('./src/components/LoadingBottton/index.vue')['default']
     Position: typeof import('./src/components/Position/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     StylePosition: typeof import('./src/components/StylePosition/index.vue')['default']
+    UploadFile: typeof import('./src/components/UploadFile/index.vue')['default']
   }
 }
