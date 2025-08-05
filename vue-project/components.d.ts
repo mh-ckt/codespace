@@ -11,6 +11,7 @@ declare module 'vue' {
     Aa: typeof import('./src/components/CustomBotton/aa.vue')['default']
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
+    Calendar: typeof import('./src/components/Calendar/index.vue')['default']
     CustomBotton: typeof import('./src/components/CustomBotton/index.vue')['default']
     CustomBottton: typeof import('./src/components/CustomBottton/index.vue')['default']
     Demo: typeof import('./src/components/CustomBotton/Demo.vue')['default']

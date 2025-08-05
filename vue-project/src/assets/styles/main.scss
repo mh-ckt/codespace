@@ -1,5 +1,8 @@
-@import './base.scss';
-@import './rename.scss';
+// @import './base.scss';
+// @import './rename.scss';
+
+@use './base.scss' as *;
+@use './rename.scss' as *;
 
 /* vue默认的样式 */
 #app {
