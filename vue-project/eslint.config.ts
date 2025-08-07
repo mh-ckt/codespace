@@ -29,6 +29,7 @@ export default defineConfigWithVueTs(
     rules: {
       'vue/multi-word-component-names': 'off', // 允许单文件组件使用单个单词的名称
       '@typescript-eslint/no-unused-vars': 'warn',
+      'vue/block-lang': 'off',
     },
   }
 )
