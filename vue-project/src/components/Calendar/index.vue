@@ -7,28 +7,19 @@
       </h2>
       <button @click="nextMonth" class="nav-btn">&gt;</button>
     </div>
-    
+
     <div class="calendar-weekdays">
-      <div 
-        v-for="day in weekdays" 
-        :key="day" 
-        class="weekday"
-      >
+      <div v-for="day in weekdays" :key="day" class="weekday">
         {{ day }}
       </div>
     </div>
-    
+
     <div class="calendar-days">
-      <div
-        v-for="day in calendarDays"
-        :key="day.key"
-        :class="getDayClasses(day)"
-        @click="selectDate(day)"
-      >
+      <div v-for="day in calendarDays" :key="day.key" :class="getDayClasses(day)" @click="selectDate(day)">
         {{ day.date }}
       </div>
     </div>
-    
+
     <!-- 选中的日期显示 -->
     <div v-if="selectedDate" class="selected-date">
       <p>选中的日期: {{ formatDate(selectedDate) }}</p>
@@ -70,23 +61,23 @@ const nextMonth = () => {
 const calendarDays = computed(() => {
   const year = currentYear.value
   const month = currentMonth.value
-  
+
   // 当月第一天和最后一天
   const firstDay = new Date(year, month, 1)
   const lastDay = new Date(year, month + 1, 0)
-  
+
   // 当月第一天是星期几（0是星期日）
   const firstDayWeekday = firstDay.getDay()
-  
+
   // 当月天数
   const daysInMonth = lastDay.getDate()
-  
+
   // 上个月的天数
   const prevMonth = new Date(year, month, 0)
   const daysInPrevMonth = prevMonth.getDate()
-  
+
   const days = []
-  
+
   // 添加上个月的日期（填充日历开头）
   for (let i = firstDayWeekday - 1; i >= 0; i--) {
     const date = daysInPrevMonth - i
@@ -101,7 +92,7 @@ const calendarDays = computed(() => {
       day: new Date(year, month - 1, date).getDay()
     })
   }
-  
+
   // 添加当月的日期
   for (let date = 1; date <= daysInMonth; date++) {
     const key = `${year}-${month}-${date}`
@@ -115,7 +106,7 @@ const calendarDays = computed(() => {
       day: new Date(year, month, date).getDay()
     })
   }
-  
+
   // 添加下个月的日期（填充日历末尾，总共显示42个日期格子）
   const totalCells = 42
   const remainingCells = totalCells - days.length
@@ -174,7 +165,7 @@ const formatDate = (date) => {
   const day = String(date.getDate()).padStart(2, '0')
   const weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
   const weekday = weekdays[date.getDay()]
-  
+
   return `${year}年${month}月${day}日 ${weekday}`
 }
 
@@ -331,20 +322,20 @@ onMounted(() => {
     margin: 10px;
     max-width: none;
   }
-  
+
   .calendar-header {
     padding: 15px;
   }
-  
+
   .month-year {
     font-size: 18px;
   }
-  
+
   .day {
     font-size: 13px;
     min-height: 40px;
   }
-  
+
   .weekday {
     padding: 10px 0;
     font-size: 12px;
