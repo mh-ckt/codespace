@@ -1,0 +1,37 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+  .sidebar {
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+    padding: 10px 0;
+  }
+  .sidebar > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .detail {
+    background-color: #f9f6f7;
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    height: calc();
+  }
+}
