@@ -3,8 +3,10 @@ import JavaScript from '@/views/todo/javascript/index.jsx'
 import Style from '@/views/todo/csss/index.jsx'
 import React from '@/views/todo/react/index.jsx'
 import Optimize from '@/views/todo/optimize/index.jsx'
-
-import { createBrowserRouter, Navigate } from 'react-router-dom'
+import RecordBill from '@/views/me/recordBill/index.jsx'
+import BillDetail from '@/views/me/billDetail/index.jsx'
+import Statistics from '@/views/me/billDetail/statistics/index.jsx' // 统计
+import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom'
 let router = createBrowserRouter([
   {
     path: '/',
@@ -30,6 +32,27 @@ let router = createBrowserRouter([
     path: '/todo',
     key: 'todo',
     element: <App />
+  },
+  {
+    path: '/me',
+    name: 'me',
+    children: [
+      {
+        path: 'RecordBill',
+        name: 'RecordBill',
+        element: <RecordBill />
+      },
+      {
+        path: 'BillDetail',
+        name: 'BillDetail',
+        element: <BillDetail />
+      },
+      {
+        path: 'Statistics',
+        name: 'Statistics',
+        element: <Statistics />
+      }
+    ]
   },
   {
     path: '/todo',
