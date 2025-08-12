@@ -6,6 +6,7 @@ import Optimize from '@/views/todo/optimize/index.jsx'
 import RecordBill from '@/views/me/recordBill/index.jsx'
 import BillDetail from '@/views/me/billDetail/index.jsx'
 import Statistics from '@/views/me/billDetail/statistics/index.jsx' // 统计
+import BuiltlnHook from '@/views/todo/builtInHook/index.jsx'
 import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom'
 let router = createBrowserRouter([
   {
@@ -59,25 +60,30 @@ let router = createBrowserRouter([
     key: 'todo',
     children: [
       {
-        path: '/todo/javascript',
+        path: 'javascript',
         name: 'javascript',
         element: <JavaScript />
       },
       {
-        path: '/todo/style',
+        path: 'style',
         name: '样式',
         element: <Style />
       },
       {
-        path: '/todo/optimize',
+        path: 'optimize',
         name: '性能优化',
         element: <Optimize />
       },
       {
-        path: '/todo/react',
+        path: 'react',
         name: 'react',
         element: <React />
-      }
+      },
+      {
+        path: 'BuiltlnHook',
+        name: '内置 Hook',
+        element: <BuiltlnHook />
+      },
     ]
   }
 ])

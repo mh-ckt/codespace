@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '@/components/navBar'
+import NavBar from '@/components/NavBar/index.jsx'
 import CardList from '@/components/cardList'
 import { useLocation } from 'react-router-dom'
 import data from '@/mock/index'
@@ -10,7 +10,7 @@ const JavaScript = () => {
   let list = data.filter(item => item.type === 'react')
   return (
     <div>
-      <NavBar title={{ title }} />
+      <NavBar>{title}</NavBar>
       <CardList list={list} />
     </div>
   )

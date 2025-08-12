@@ -1,6 +1,6 @@
 import React from 'react'
 import global from '@/assets/styles/global.less'
-import NavBar from '@/components/navBar'
+import NavBar from '@/components/NavBar/index.jsx'
 import CardList from '@/components/cardList'
 import { useLocation } from 'react-router-dom'
 import data from '@/mock/index'
@@ -11,7 +11,7 @@ const JavaScript = () => {
   let list = data.filter(item => item.type === 'css')
   return (
     <div>
-      <NavBar title={{ title }} />
+      <NavBar>{title}</NavBar>
       <CardList list={list} />
     </div>
   )
