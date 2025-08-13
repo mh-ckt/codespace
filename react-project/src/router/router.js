@@ -7,6 +7,7 @@ import RecordBill from '@/views/me/recordBill/index.jsx'
 import BillDetail from '@/views/me/billDetail/index.jsx'
 import Statistics from '@/views/me/billDetail/statistics/index.jsx' // 统计
 import BuiltlnHook from '@/views/todo/builtInHook/index.jsx'
+import HighAction from '@/views/todo/highAction/index.jsx'
 import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom'
 let routes = [{
   path: '/',
@@ -82,6 +83,11 @@ let routes = [{
       path: 'BuiltlnHook',
       name: '内置 Hook',
       element: <BuiltlnHook />
+    },
+    {
+      path: 'HighAction',
+      name: '进阶功能',
+      element: <HighAction />
     },
   ]
 }]
