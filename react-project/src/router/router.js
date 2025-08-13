@@ -8,6 +8,7 @@ import BillDetail from '@/views/me/billDetail/index.jsx'
 import Statistics from '@/views/me/billDetail/statistics/index.jsx' // 统计
 import BuiltlnHook from '@/views/todo/builtInHook/index.jsx'
 import HighAction from '@/views/todo/highAction/index.jsx'
+import PageAction from '@/views/todo/pageAction/index.jsx'
 import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom'
 let routes = [{
   path: '/',
@@ -89,6 +90,11 @@ let routes = [{
       name: '进阶功能',
       element: <HighAction />
     },
+    {
+      path: 'PageAction',
+      name: '页面功能',
+      element: <PageAction />
+    }
   ]
 }]
 
