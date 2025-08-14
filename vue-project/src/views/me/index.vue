@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <RouterView />
+  <header>me</header>
 </template>
 
 <style scoped></style>
