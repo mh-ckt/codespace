@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "1"
-  text: "1"
+  name: "mh"
+  text: "前端笔记"
   tagline: My great project tagline
   actions:
     - theme: brand
